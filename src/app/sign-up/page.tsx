@@ -12,20 +12,21 @@ const Signup = dynamic(
     }
 )
 const SignUpPage = () => {
-    // const { accessToken } = useSelector((store: any) => store.login.data);
-    // const router = useRouter()
-    // useEffect(() => {
-    //     if (accessToken) {
-    //         router.push("/dashboard");
-    //     }
-    // }, [])
-    // if (!accessToken) {
+    const { accessToken } = useSelector((store: any) => store.login.data);
+    const router = useRouter()
+    useEffect(() => {
+        if (accessToken) {
+            router.push("/dashboard");
+        }
+    }, [])
+    if (!accessToken) {
         return (
-            <Signup />
+            // <Signup />
+            <></>
         )
-    // } else {
-    //     return <Loader />
-    // }
+    } else {
+        return <Loader />
+    }
 
     // old signup
     // <>
