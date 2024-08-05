@@ -1,16 +1,41 @@
 'use client'
+import React, { useState } from 'react';
 import CustomTabs from '@/components/custom-tabs/CustomTabs'
 import ProtectedLayoutSecond from '@/components/protected-layout-second/ProtectedLayoutSecond'
 import TableActionButton from '@/components/table-action-button/TableActionButton'
 import { Preview, Print } from '@mui/icons-material'
-import React, { useEffect, useState } from 'react';
-import AllOrders from './AllOrders'
-import CompletedOrders from './CompletedOrders'
-import DeliveredOrders from './DeliveredOrders'
-import CanceledOrders from './CanceledOrders'
+import dynamic from 'next/dynamic'
+import Loader from '@/components/loader/Loader'
 import Link from 'next/link'
 import ProtectedLayout from '@/components/protected-layout/ProtectedLayout'
 import { LAYOUTS } from '@/constants/common'
+
+const AllOrders = dynamic(
+  () => import('./AllOrders'),
+  {
+    loading: () => <Loader isLoading={true} />,
+  }
+)
+const CompletedOrders = dynamic(
+  () => import('./CompletedOrders'),
+  {
+    loading: () => <Loader isLoading={true} />,
+  }
+)
+const DeliveredOrders = dynamic(
+  () => import('./DeliveredOrders'),
+  {
+    loading: () => <Loader isLoading={true} />,
+  }
+)
+const CanceledOrders = dynamic(
+  () => import('./CanceledOrders'),
+  {
+    loading: () => <Loader isLoading={true} />,
+  }
+)
+
+
 
 
 
