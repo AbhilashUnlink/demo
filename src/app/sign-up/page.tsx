@@ -21,8 +21,7 @@ const SignUpPage = () => {
     }, [])
     if (!accessToken) {
         return (
-            // <Signup />
-            <></>
+            <Signup />
         )
     } else {
         return <Loader />
