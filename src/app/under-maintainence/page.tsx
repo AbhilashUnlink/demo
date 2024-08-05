@@ -1,5 +1,5 @@
 import { Button } from '@mui/material';
-// import Link from 'next/link';
+import Link from 'next/link';
 import React from 'react'
 // under - maintainence
 const UnderMaintainence = () => {
@@ -9,11 +9,11 @@ const UnderMaintainence = () => {
             <br />
             <p>Click Here To Go Back To Dashboard</p>
             <br />
-            {/* <Link href="/dashboard"> */}
+            <Link href="/dashboard">
             <Button variant='contained'>
-                    Go Back
+                    Dashboard
             </Button>
-            {/* </Link> */}
+            </Link>
         </div>
     )
 }
