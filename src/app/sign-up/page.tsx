@@ -11,21 +11,21 @@ const Signup = dynamic(
         loading: () => <Loader isLoading={true} />,
     }
 )
-const LoginPage = () => {
-    const { accessToken } = useSelector((store: any) => store.login.data);
-    const router = useRouter()
-    useEffect(() => {
-        if (accessToken) {
-            router.push("/dashboard");
-        }
-    }, [])
-    if (!accessToken) {
+const SignUpPage = () => {
+    // const { accessToken } = useSelector((store: any) => store.login.data);
+    // const router = useRouter()
+    // useEffect(() => {
+    //     if (accessToken) {
+    //         router.push("/dashboard");
+    //     }
+    // }, [])
+    // if (!accessToken) {
         return (
             <Signup />
         )
-    } else {
-        return <Loader />
-    }
+    // } else {
+    //     return <Loader />
+    // }
 
     // old signup
     // <>
@@ -86,4 +86,4 @@ const LoginPage = () => {
 
 }
 
-export default LoginPage
+export default SignUpPage
