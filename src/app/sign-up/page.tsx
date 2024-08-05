@@ -1,6 +1,8 @@
 'use client'
 import Loader from "@/components/loader/Loader";
 import dynamic from "next/dynamic";
+import { useRouter } from "next/navigation";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const Signup = dynamic(
@@ -11,12 +13,12 @@ const Signup = dynamic(
 )
 const LoginPage = () => {
     const { accessToken } = useSelector((store: any) => store.login.data);
-    // const router = useRouter()
-    // useEffect(() => {
-    //     if (accessToken) {
-    //         router.push("/dashboard");
-    //     }
-    // }, [])
+    const router = useRouter()
+    useEffect(() => {
+        if (accessToken) {
+            router.push("/dashboard");
+        }
+    }, [])
     if (!accessToken) {
         return (
             <Signup />
