@@ -1,0 +1,18 @@
+.count {
+    border-radius: 50%;
+    width: 14px;
+    height: 14px;
+    font-size: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.menu-icons svg{
+    margin-top: -3px;
+    height: 16px;
+    width: 16px;
+}  
+/* .menu-icons svg:hover{
+    height: 18px;
+    width: 18px;
+}   */

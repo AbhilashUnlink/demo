@@ -1,0 +1,116 @@
+.login-page {
+    height: "100vh";
+    width: "100%";
+    overflow: hidden;
+}
+
+.login-top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 10vh;
+    padding: 20px;
+    margin-top: 2px;
+}
+
+.login-logo {
+    height: 40px;
+    width: 140px;
+    cursor: pointer;
+}
+
+.login-logo:hover {
+    cursor: pointer;
+}
+
+.login-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-page-middle-section {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.sign-in-heading {
+    font-weight: 700;
+    font-size: 25px;
+    line-height: 32px;
+}
+
+.sign-in-subheading {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+.sign-up-link {
+    color: #015ad9;
+    margin-left: 4px;
+    cursor: pointer;
+}
+
+.sign-up-link:hover {
+    color: #015ad99e;
+}
+
+.login-input-field {
+    width: 450px;
+    height: 44px;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    padding-left: 12px;
+    border-radius: 3px;
+    border: 1px solid gray;
+}
+
+.login-continue-button {
+    padding: "12px 16px";
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 450px;
+    background: #006aff;
+    min-height: 42px;
+    border-radius: 3px;
+}
+
+.login-continue-button:hover {
+    background: #006affab;
+}
+
+.login-page-footer {
+    height: 10vh;
+    padding: 20px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.login-logo-new {
+    height: 70px;
+    width: 250px;
+    cursor: pointer;
+}
+img.login-logo-new{
+    filter: brightness(0);
+}
+.email-input input {
+    border: none;
+    /* outline: none; */
+    width: 100%;
+    background-color: #f5f5f7;
+    padding: 1rem;
+    border: 1px solid rgba(180, 179, 179, 0.716);
+    border-radius: 6px;
+}

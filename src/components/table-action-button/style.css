@@ -1,0 +1,33 @@
+/* .view-action svg {
+    font-size: 1.2em;
+    color: #03A9F4;
+    padding: 0px 0px;
+}
+.view-action {
+    cursor: pointer;
+    margin: 0 auto;
+}
+.action-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+} */
+
+.add-btn {
+    border: 1px solid #108A00 !important;
+    color: #108A00 !important;
+    font-weight: 500;
+    background-color: #fff;
+    border-radius: 2px;
+    padding: 2px 10px;
+    font-family: "Work Sans", sans-serif !important;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.add-btn:hover {
+    color: #fff !important;
+    background-color: #108A00;
+}

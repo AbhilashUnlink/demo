@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 0, 0, 0;
+    --background-end-rgb: 0, 0, 0;
+  }
+}
+
+body {
+  font-family: "Inter", sans-serif !important;
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+}
+
+div {
+  font-family: "Inter", sans-serif !important;
+}
+
+span {
+  font-family: "Inter", sans-serif !important;
+}
+a {
+  font-family: "Inter", sans-serif !important;
+}
+
+button:disabled {
+  background-color: rgba(94, 147, 254, 0.559);
+}
+
+
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+/*  */
+
+.search-button {
+  color: #fff;
+  background-color: #fd571b;
+  border: 1px solid #fd571b;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+.export-button {
+  color: #fd571b;
+  border: 1px solid #fd571b;
+  font-size: 1rem;
+  line-height: 1.6;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 6px 12px;
+}
+
+.employee-search-box {
+  border: 1px solid #fd571b;
+}
+
+.employee-search-box input {
+  padding: 2px 20px;
+  outline: none;
+}
+
+.yogo-pos-table-header {
+  background: #0175FF;
+  font-size: 14px;
+  color: white;
+}
+
+.check-summary-button {
+  color: #0175FF;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 2px 5px;
+  margin-bottom: 10px;
+}
+
+.check-out-button {
+  color: #108A00;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  padding: 2px 5px;
+}
+
+.employee-table-container {
+  width: 100%;
+  overflow: hidden;
+  overflow-y: scroll;
+}
+
+.add-edit-employee-input-field {
+  border: 1px solid gray;
+  padding: 8px 20px;
+  border-radius: 4px;
+}
+
+.w-100 {
+  width: 100% !important;
+}
+
+.w-50 {
+  width: 50% !important;
+}
+
+.whiteBg {
+  background-color: white !important;
+  color: black !important;
+  border: 1px solid black !important;
+}
+
+.width-20 {
+  width: 20%;
+}
+
+.width-25 {
+  width: 25%;
+}
+
+.width-80 {
+  width: 80%;
+}
+
+.height-100 {
+  height: 100vh;
+}
+
+.height-90 {
+  height: 90vh;
+}
+
+.height-10 {
+  height: 10vh;
+}
+.ant-select-selection {
+  background-color: gray !important ;
+}
