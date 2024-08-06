@@ -1,10 +1,10 @@
 'use client'
 import ProtectedLayout from '@/components/protected-layout/ProtectedLayout'
 import React, { useState } from 'react'
-import DeliveredOrders from '../all-orders/DeliveredOrders'
 import TableActionButton from '@/components/table-action-button/TableActionButton';
 import { Preview, Print } from '@mui/icons-material';
 import Link from 'next/link';
+import DeliveredOrders from '@/components/all-orders-comps/DeliveredOrders';
 
 const headerClassName = "yogo-pos-table-header";
 const commonButtonStyle = { fontSize: "30px", padding: "3px", borderRadius: "5px" };
@@ -127,9 +127,10 @@ const DeliveredOrdersPage = () => {
         CANCELED: "1",
     });
   return (
-    <ProtectedLayout>
-          <DeliveredOrders columns={columns} ordersCount={ordersCount} />
-    </ProtectedLayout>
+    // <ProtectedLayout>
+    //       <DeliveredOrders columns={columns} ordersCount={ordersCount} />
+    // </ProtectedLayout>
+    <></>
   )
 }
 

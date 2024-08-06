@@ -1,36 +1,46 @@
 'use client'
 import React, { useState } from 'react';
 import CustomTabs from '@/components/custom-tabs/CustomTabs'
-import ProtectedLayoutSecond from '@/components/protected-layout-second/ProtectedLayoutSecond'
 import TableActionButton from '@/components/table-action-button/TableActionButton'
 import { Preview, Print } from '@mui/icons-material'
 import dynamic from 'next/dynamic'
 import Loader from '@/components/loader/Loader'
 import Link from 'next/link'
-import ProtectedLayout from '@/components/protected-layout/ProtectedLayout'
 import { LAYOUTS } from '@/constants/common'
 
-const AllOrders = dynamic(
-  () => import('./AllOrders'),
+const ProtectedLayoutThird = dynamic(
+  () => import('@/components/protected-layout-third/ProtectedLayoutThird'),
   {
+    ssr: false,
+    loading: () => <Loader isLoading={true} />,
+  }
+)
+
+const AllOrders = dynamic(
+  () => import('@/components/all-orders-comps/AllOrders'),
+  {
+    ssr: false,
     loading: () => <Loader isLoading={true} />,
   }
 )
 const CompletedOrders = dynamic(
-  () => import('./CompletedOrders'),
+  () => import('@/components/all-orders-comps/CompletedOrders'),
   {
+    ssr: false,
     loading: () => <Loader isLoading={true} />,
   }
 )
 const DeliveredOrders = dynamic(
-  () => import('./DeliveredOrders'),
+  () => import('@/components/all-orders-comps/DeliveredOrders'),
   {
+    ssr: false,
     loading: () => <Loader isLoading={true} />,
   }
 )
 const CanceledOrders = dynamic(
-  () => import('./CanceledOrders'),
+  () => import('@/components/all-orders-comps/CanceledOrders'),
   {
+    ssr: false,
     loading: () => <Loader isLoading={true} />,
   }
 )
@@ -171,41 +181,41 @@ const AllOrdersPage = () => {
   });
 
 
-  if (layout === LAYOUTS.firstLayout) {
-    return (
-      <>
-        <ProtectedLayout title={"All Orders"}>
-          <div style={{ marginTop: "2rem" }}>
-            <AllOrders columns={columns} ordersCount={ordersCount} />
-          </div>
-        </ProtectedLayout>
-      </>
-    )
-  }
-  else {
-    return (
-      <ProtectedLayoutSecond
-        navbar={<CustomTabs
-          tabs={[{
-            label: "All Orders",
-            children: <AllOrders columns={columns} ordersCount={ordersCount} />
-          },
-          {
-            label: "Delivered", children: <DeliveredOrders columns={columns} ordersCount={ordersCount} />
-          },
-          {
-            label: "Completed", children: <CompletedOrders columns={columns} ordersCount={ordersCount} />
-          },
-          {
-            label: "Canceled", children: <CanceledOrders columns={columns} ordersCount={ordersCount} />
-          }
-          ]} />}
-      >
-
-      </ProtectedLayoutSecond>
-    )
-  }
+  // if (layout === LAYOUTS.firstLayout) {
+  //   return (
+  //     <>
+  //       <ProtectedLayout title={"All Orders"}>
+  //         <div style={{ marginTop: "2rem" }}>
+  //           <AllOrders columns={columns} ordersCount={ordersCount} />
+  //         </div>
+  //       </ProtectedLayout>
+  //     </>
+  //   )
+  // }
+  // else {
+  return (
+    <ProtectedLayoutThird
+      navbar={<CustomTabs
+        tabs={[{
+          label: "All Orders",
+          children: <AllOrders columns={columns} ordersCount={ordersCount} />
+        },
+        {
+          label: "Delivered", children: <DeliveredOrders columns={columns} ordersCount={ordersCount} />
+        },
+        {
+          label: "Completed", children: <CompletedOrders columns={columns} ordersCount={ordersCount} />
+        },
+        {
+          label: "Canceled", children: <CanceledOrders columns={columns} ordersCount={ordersCount} />
+        }
+        ]} />}
+    >
+      <AllOrders columns={columns} ordersCount={ordersCount} />
+    </ProtectedLayoutThird>
+  )
 }
+// }
 
 export default AllOrdersPage;
 

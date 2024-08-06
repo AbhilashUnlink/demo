@@ -2,8 +2,8 @@
 import React, { Fragment, useState } from 'react'
 import {  ListItemText } from '@mui/material';
 import CustomNestedList from '../custom-nested-list/CustomNestedList';
-import { customTheme, fontSize, fontWeight } from '@/app/constants/style.c';
 import { menuItemColorType, SideMenusList } from '@/constants/side-menus-list';
+import { customTheme, fontSize, fontWeight } from '@/comp-constants/style.c';
 
 
 const SideNavbar = ({ ourTheme = "themeOne" }: any) => {

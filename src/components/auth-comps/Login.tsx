@@ -3,7 +3,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import YOCO_POS_LOGO from "../../assets/yogo-pos-logo.png";
 import "./style.login.css";
-import {  customThemeType } from '../constants/style.c';
+import { customThemeType } from '../../comp-constants/style.c';
 import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import Loader from '@/components/loader/Loader';

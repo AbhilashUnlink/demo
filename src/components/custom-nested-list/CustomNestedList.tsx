@@ -7,8 +7,8 @@ import ExpandLess from '@mui/icons-material/ExpandLess';
 import ExpandMore from '@mui/icons-material/ExpandMore';
 import Link from 'next/link';
 import { Divider, ListItem } from '@mui/material';
-import { customTheme } from '@/app/constants/style.c';
 import "./style.css";
+import { customTheme } from '@/comp-constants/style.c';
 
 const menuListItemHeight = "6vh";
 const paddingMenuListItem = "2px";

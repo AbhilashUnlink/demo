@@ -7,7 +7,7 @@ import { useEffect } from "react";
 import { useSelector } from "react-redux";
 
 const Login = dynamic(
-    () => import('./Login'),
+    () => import('../../components/auth-comps/Login'),
     {
         loading: () => <Loader isLoading={true} />,
     }

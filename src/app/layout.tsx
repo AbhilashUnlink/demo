@@ -3,7 +3,7 @@ import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
 import { AppRouterCacheProvider } from '@mui/material-nextjs/v13-appRouter';
-import ReduxProvider from "./ReduxProvider";
+import ReduxProvider from "../components/ReduxProvider";
 
 const inter = Inter({ subsets: ["latin"] });
 

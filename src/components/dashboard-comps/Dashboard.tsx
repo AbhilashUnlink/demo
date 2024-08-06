@@ -1,4 +1,4 @@
-import Loader from '@/components/loader/Loader'
+'use client'
 import React from 'react'
 
 const Dashboard = () => {

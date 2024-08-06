@@ -4,7 +4,16 @@ import React, { useState } from 'react'
 import TableActionButton from '@/components/table-action-button/TableActionButton';
 import { Preview, Print } from '@mui/icons-material';
 import Link from 'next/link';
-import CompletedOrders from '../all-orders/CompletedOrders';
+import dynamic from 'next/dynamic';
+import Loader from '@/components/loader/Loader';
+
+const CompletedOrders = dynamic(
+    () => import('@/components/all-orders-comps/CompletedOrders'),
+    {
+        ssr: false,
+        loading: () => <Loader isLoading={true} />,
+    }
+)
 
 const headerClassName = "yogo-pos-table-header";
 const commonButtonStyle = { fontSize: "30px", padding: "3px", borderRadius: "5px" };
@@ -127,9 +136,10 @@ const CompletedOrdersPage = () => {
         CANCELED: "1",
     });
     return (
-        <ProtectedLayout title={"Completed Orders"}>
-            <CompletedOrders columns={columns} ordersCount={ordersCount} />
-        </ProtectedLayout>
+        // <ProtectedLayout title={"Completed Orders"}>
+        //     <CompletedOrders columns={columns} ordersCount={ordersCount} />
+        // </ProtectedLayout>
+        <></>
     )
 }
 

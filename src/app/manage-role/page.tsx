@@ -1,18 +1,22 @@
 'use client'
-import "./style.css";
-import ProtectedLayoutThird from '@/components/protected-layout-third/ProtectedLayoutThird';
 import CustomTabs from '@/components/custom-tabs/CustomTabs';
 import dynamic from "next/dynamic";
 import Loader from "@/components/loader/Loader";
 
+const ProtectedLayoutThird = dynamic(
+    () => import('@/components/protected-layout-third/ProtectedLayoutThird'),
+    {
+        loading: () => <Loader isLoading={true} />,
+    }
+)
 const ManageEmployees = dynamic(
-    () => import('../manage-employees/ManageEmployees'),
+    () => import('../../components/manage-employees-comps/ManageEmployees'),
     {
         loading: () => <Loader isLoading={true} />,
     }
 )
 const ManageRole = dynamic(
-    () => import('./ManageRole'),
+    () => import('@/components/manage-role-comps/ManageRole'),
     {
         loading: () => <Loader isLoading={true} />,
     }

@@ -1,18 +1,23 @@
 'use client'
 
-import ProtectedLayoutThird from "@/components/protected-layout-third/ProtectedLayoutThird";
 import CustomTabs from "@/components/custom-tabs/CustomTabs";
 import dynamic from "next/dynamic";
 import Loader from "@/components/loader/Loader";
 
+const ProtectedLayoutThird = dynamic(
+    () => import('@/components/protected-layout-third/ProtectedLayoutThird'),
+    {
+        loading: () => <Loader isLoading={true} />,
+    }
+)
 const SubCategories = dynamic(
-    () => import('./SubCategories'),
+    () => import('@/components/sub-category-comps/SubCategories'),
     {
         loading: () => <Loader isLoading={true} />,
     }
 )
 const MainCategories = dynamic(
-    () => import('../main-categories/MainCategories'),
+    () => import('@/components/main-category-comps/MainCategories'),
     {
         loading: () => <Loader isLoading={true} />,
     }

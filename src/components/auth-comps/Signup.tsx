@@ -1,11 +1,11 @@
 'use client'
 import React, { useState } from 'react'
-import { customThemeType } from '../constants/style.c'
+import { customThemeType } from '../../comp-constants/style.c'
 import Image from 'next/image';
 import YOCO_POS_LOGO from "../../assets/yogo-pos-logo.png"
 import Link from 'next/link';
 import "./style.sign-up.css";
-import "../login/style.login.css"
+import "./style.login.css"
 import CustomCheckbox from '@/components/form-fields/CustomCheckbox';
 import { useDispatch, useSelector } from 'react-redux';
 import { registerThunk } from '@/features/login-redux/login.r';

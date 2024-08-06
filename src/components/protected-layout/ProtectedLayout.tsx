@@ -14,13 +14,13 @@ import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import SideNavbar from '../sidenavbar/SideNavbar';
 import YOGO_POS_LOGO from "../../assets/yogo-pos-logo.png";
 import Image from 'next/image';
-import { customTheme, customThemeType } from '@/app/constants/style.c';
 import "./style.css";
 import ThemeChangeButton from '../theme-change-button/ThemeChangeButton';
 import LayoutChangeButton from '../layout-change-button/LayoutChangeButton';
 import { LAYOUTS } from '@/constants/common';
 import { useDispatch } from 'react-redux';
 import { setLogout } from '@/features/login-redux/login.r';
+import { customTheme, customThemeType } from '@/comp-constants/style.c';
 
 const drawerWidth = 260;
 const appBarHeight = "72px";

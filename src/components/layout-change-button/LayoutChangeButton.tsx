@@ -1,10 +1,10 @@
-import { customTheme, customThemeType } from '@/app/constants/style.c';
 import Image from 'next/image';
 import React from 'react';
 import Leaf from "../../assets/leaf.png";
 import { LayersClearOutlined, LayersOutlined } from '@mui/icons-material';
 import "./style.css";
 import { LAYOUTS } from '@/constants/common';
+import { customThemeType } from '@/comp-constants/style.c';
 
 const LayoutChangeButton = ({ ourLayout, setOurLayout }: any) => {
     const toggleLayout = () => {

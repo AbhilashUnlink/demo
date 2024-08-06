@@ -4,7 +4,7 @@ import React, { useState } from 'react'
 import TableActionButton from '@/components/table-action-button/TableActionButton';
 import { Preview, Print } from '@mui/icons-material';
 import Link from 'next/link';
-import CanceledOrders from '../all-orders/CanceledOrders';
+import CanceledOrders from '@/components/all-orders-comps/CanceledOrders';
 
 const headerClassName = "yogo-pos-table-header";
 const commonButtonStyle = { fontSize: "30px", padding: "3px", borderRadius: "5px" };

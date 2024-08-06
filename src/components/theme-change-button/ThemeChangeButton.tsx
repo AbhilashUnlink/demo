@@ -1,7 +1,7 @@
-import { customTheme, customThemeType } from '@/app/constants/style.c';
 import Image from 'next/image';
 import React from 'react';
 import Leaf from "../../assets/leaf.png";
+import { customTheme, customThemeType } from '@/comp-constants/style.c';
 
 const ThemeChangeButton = ({ ourTheme, setOurTheme }: any) => {
 

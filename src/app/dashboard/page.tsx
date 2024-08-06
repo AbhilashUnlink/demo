@@ -4,13 +4,19 @@ import ProtectedLayout from '@/components/protected-layout/ProtectedLayout';
 import React, { useEffect, useState } from 'react';
 import ProtectedLayoutSecond from '@/components/protected-layout-second/ProtectedLayoutSecond';
 import { LAYOUTS } from '@/constants/common';
-import ProtectedLayoutThird from '@/components/protected-layout-third/ProtectedLayoutThird';
 import CustomTabs from '@/components/custom-tabs/CustomTabs';
 // import Dashboard from './Dashboard';
 import dynamic from 'next/dynamic';
 import Loader from '@/components/loader/Loader';
+// import Dashboard from '@/components/dashboard-comps/Dashboard';
+const ProtectedLayoutThird = dynamic(
+    () => import('@/components/protected-layout-third/ProtectedLayoutThird'),
+    {
+        loading: () => <Loader isLoading={true} />,
+    }
+)
 const Dashboard = dynamic(
-    () => import('./Dashboard'),
+    () => import('@/components/dashboard-comps/Dashboard'),
     {
         loading: () => <Loader isLoading={true} />,
     }

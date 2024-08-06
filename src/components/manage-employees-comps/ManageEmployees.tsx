@@ -11,6 +11,8 @@ import CustomDrawer, { DRAWER_TYPE, DRAWER_WIDTH } from '@/components/custom-dra
 import AddEditEmployee from './AddEditEmployee';
 import ToggleButton from '@/components/toggle-button/ToggleButton';
 // import Loader from '@/components/loader/Loader';
+import "./style.css";
+
 
 const commonButtonStyle = { fontSize: "30px", padding: "3px", borderRadius: "5px" };
 const editButtonStyle = { color: "#02C9DB", border: "1px solid #02C9DB", ...commonButtonStyle };
