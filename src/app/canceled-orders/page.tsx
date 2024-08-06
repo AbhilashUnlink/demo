@@ -126,7 +126,7 @@ const CanceledOrdersPage = () => {
         DELIVERED: "10",
         CANCELED: "1",
     });
-    return (
+return (
         // <ProtectedLayout title={"Canceled Orders"}>
         //     <CanceledOrders columns={columns} ordersCount={ordersCount} />
         // </ProtectedLayout>

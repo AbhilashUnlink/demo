@@ -111,22 +111,22 @@ const CustomersList = () => {
     },
   ];
   return (
-    <ProtectedLayout>
-      <DataGrid
-        rows={rows}
-        columnHeaderHeight={35}
-        autoHeight={true}
-        rowHeight={45}
-        columns={columns}
-        disableRowSelectionOnClick
-        rowCount={rowCounts}
-        pagination
-        paginationModel={pagination}
-        paginationMode="server"
-        onPaginationModelChange={setPagination}
-      // loading={loading}
-      />
-    </ProtectedLayout>
+    <></>
+    // <ProtectedLayout>
+    //   <DataGrid
+    //     rows={rows}
+    //     columnHeaderHeight={35}
+    //     autoHeight={true}
+    //     rowHeight={45}
+    //     columns={columns}
+    //     disableRowSelectionOnClick
+    //     rowCount={rowCounts}
+    //     pagination
+    //     paginationModel={pagination}
+    //     paginationMode="server"
+    //     onPaginationModelChange={setPagination}
+    //   />
+    // </ProtectedLayout>
   )
 }
 
