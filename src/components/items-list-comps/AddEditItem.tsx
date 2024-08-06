@@ -310,7 +310,7 @@ const AddEditItem = () => {
                     <div key={section.id} className="section">
                         <h2>Add New</h2>
                         <form>
-                            <div className='flex justify-between'>
+                            <div className='flex gap-5'>
                                 <div className="form-group flex flex-col">
                                     {/* <div className='flex-col'> */}
                                     <label>
@@ -323,7 +323,7 @@ const AddEditItem = () => {
                                     {/* <div className='flex-col'> */}
                                     {/* <label> */}
                                     Selection Type:
-                                    <div className='flex'>
+                                    <div className='flex gap-5'>
                                         <label>
                                             <input
                                                 style={{ outline: "none" }}
@@ -376,31 +376,38 @@ const AddEditItem = () => {
                             </div>
                             <div className="options">
                                 {section.options && section.options.map((option: any, index: any) => (
-                                    <div key={index} className="option">
-                                        <label>
-                                            Option Name:
+                                    <div key={index} className="option flex gap-5">
+                                        <div className='form-group flex flex-col'>
+                                            <label>
+                                                Option Name:
+                                            </label>
                                             <input
                                                 type="text"
                                                 name="name"
                                                 value={option.name}
                                                 onChange={(e) => handleOptionChange(section.id, index, e)}
                                             />
-                                        </label>
-                                        <label>
-                                            Additional Price:
+                                        </div>
+
+                                        <div className="form-group flex flex-col">
+                                            <label>
+
+                                                Additional Price:
+                                            </label>
                                             <input
                                                 type="text"
                                                 name="price"
                                                 value={option.price}
                                                 onChange={(e) => handleOptionChange(section.id, index, e)}
                                             />
-                                        </label>
+                                        </div>
                                         <button
                                             type="button"
                                             onClick={() => handleDeleteOption(section.id, index)}
-                                            className="delete-option"
+                                            // className="delete-option"
+                                            // style={{ height: "4rem", width: "4rem",background:"red"}}
                                         >
-                                            <Delete style={{ color: "white" }} />
+                                            <Delete style={{ color: "red" }} />
                                         </button>
                                     </div>
                                 ))}
