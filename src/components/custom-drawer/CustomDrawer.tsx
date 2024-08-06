@@ -17,7 +17,7 @@ export const DRAWER_WIDTH = {
     BULK_IMPORT: "45%",
     BULK_EXPORT: "45%",
 }
-export default function CustomDrawer({ drawer, setDrawer, children, onClose, popup = false }: any) {
+export default function CustomDrawer({ drawer, setDrawer, children, onClose, popup = false, popupStyle = false }: any) {
     const theme = useTheme();
     const [drawerWidth, setDrawerWidth] = useState<any>(DRAWER_WIDTH.DEFAULT);
     useEffect(() => {
@@ -66,7 +66,7 @@ export default function CustomDrawer({ drawer, setDrawer, children, onClose, pop
     }
     if (popup) {
         return <CustomPopup
-            style={style}
+            style={popupStyle ? popupStyle : style}
             title={drawer?.title}
             open={drawer.open || false}
             onClose={() => handleDrawerClose(drawer)}

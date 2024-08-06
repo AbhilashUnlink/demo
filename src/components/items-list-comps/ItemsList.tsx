@@ -9,6 +9,7 @@ import AddEditItem from './AddEditItem';
 import ToggleButton from '@/components/toggle-button/ToggleButton';
 import BulkImport from './BulkImport';
 import BulkExport from './BulkExport';
+import { colors } from '@mui/material';
 
 const headerClassName = "yogo-pos-table-header";
 const commonButtonStyle = { fontSize: "30px", padding: "3px", borderRadius: "5px" };
@@ -203,7 +204,7 @@ const ItemsList = () => {
 
 
   const onAddItemButtonClick = () => {
-    setDrawer({ open: true, title: "Add New Role Form", type: DRAWER_TYPE.ADD_EDIT_ROLE })
+    setDrawer({ open: true, title: "Add Product", type: DRAWER_TYPE.ADD_EDIT_ROLE })
     resetForm();
   }
   const onBulkImportButtonClick = () => {
@@ -213,7 +214,7 @@ const ItemsList = () => {
     setExportDrawer({ open: true, title: "Bulk Export", type: DRAWER_TYPE.BULK_EXPORT })
   }
   const onEditRoleClick = (data: any) => {
-    setDrawer({ open: true, title: "Edit Role Form", type: DRAWER_TYPE.ADD_EDIT_ROLE })
+    setDrawer({ open: true, title: "Edit Product", type: DRAWER_TYPE.ADD_EDIT_ROLE })
     setForm(data);
   }
 
@@ -233,17 +234,37 @@ const ItemsList = () => {
       onClick: () => handleConfirmDelete(data.id)
     },
   ];
+  const popupStyle = {
+    position: "absolute",
+    //   height: "60vh",
+    width: "99%",
+    left: ".5%",
+    // transform: "translate(-50%, -50%)",
+    backgroundColor: "#000",
+    // boxShadow:" rgba(9, 30, 66, 0.25) 0px 4px 8px - 2px, rgba(9, 30, 66, 0.08) 0px 0px 0px 1px",
+    // boxShadow: "rgba(0, 0, 0, 0.95) 0px 5px 15px",
+    // boxShadow: "rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px - 12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px - 3px 5px",
+    borderRadius: "5px",
+    border: "1px solid white",
+    padding: "1rem",
+    height: "98vh",
+    top: "1vh",
+    background: "white",
+    color:"black"
+  }
   return (
     <>
-      <CustomDrawer popup={popup} drawer={drawer} setDrawer={setDrawer} onClose={onDrawerClose}>
+      <CustomDrawer popup={popup} drawer={drawer} setDrawer={setDrawer} onClose={onDrawerClose}
+        popupStyle={popupStyle}
+      >
         <AddEditItem
-          popup={popup}
-          rows={rows}
-          setRows={setRows}
-          form={form}
-          setForm={setForm}
-          resetForm={resetForm}
-          onDrawerClose={onDrawerClose}
+        // popup={popup}
+        // rows={rows}
+        // setRows={setRows}
+        // form={form}
+        // setForm={setForm}
+        // resetForm={resetForm}
+        // onDrawerClose={onDrawerClose}
         />
       </CustomDrawer>
       <CustomDrawer popup={popup} drawer={importDrawer} setDrawer={setImportDrawer} onClose={onImportDrawerClose}>

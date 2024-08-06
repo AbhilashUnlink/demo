@@ -23,9 +23,9 @@
     border: 1px solid #fd571b;
 }
 
-.employee-search-box input {
+.form-group input {
     padding: 2px 20px;
-    outline: none;
+    outline: 2px solid black;
 }
 
 .employee-table-container {
@@ -49,7 +49,77 @@
 }
 
 .whiteBg {
-    background-color: white !important;
+    background-color: black !important;
     color: black !important;
     border: 1px solid black !important;
+}
+
+/*  */
+
+.variation-container {
+    width: 100%;
+}
+
+.heading {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+}
+
+.heading svg {
+    margin-left: 10px;
+    font-size: 28px;
+}
+
+.divider {
+    margin: 20px 0;
+}
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.section {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.options {
+    margin: 20px 0;
+}
+
+.option {
+    margin-bottom: 10px;
+}
+
+.add-option,
+.delete-option,
+.delete-section,
+.add-section {
+    cursor: pointer;
+    background-color: #007bff;
+    color: black;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.delete-option {
+    background-color: #dc3545;
+}
+
+.delete-section {
+    background-color: #dc3545;
+}
+
+.add-section {
+    background-color: #28a745;
 }
