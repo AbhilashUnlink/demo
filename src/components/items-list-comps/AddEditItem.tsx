@@ -245,7 +245,7 @@ import { Delete, TvOff } from '@mui/icons-material';
 
 const AddEditItem = () => {
     const [sections, setSections] = useState([{ id: Date.now() }]);
-    const [selectionType, setSelectionType] = useState('single');
+    const [selectionType, setSelectionType] = useState('multiple');
 
     const handleAddNewSection = () => {
         setSections([...sections, { id: Date.now() }]);
@@ -400,7 +400,7 @@ const AddEditItem = () => {
                                             onClick={() => handleDeleteOption(section.id, index)}
                                             className="delete-option"
                                         >
-                                            Delete Option
+                                            <Delete style={{ color: "white" }} />
                                         </button>
                                     </div>
                                 ))}
