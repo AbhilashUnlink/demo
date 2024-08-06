@@ -308,7 +308,19 @@ const AddEditItem = () => {
             <div className="form-container">
                 {sections.map((section: any) => (
                     <div key={section.id} className="section">
-                        <h2>Add New</h2>
+                        <div className='flex justify-between '>
+
+                            <strong>Add New</strong>
+                            <div className="form-actions">
+                                <button
+                                    type="button"
+                                    onClick={() => handleDeleteSection(section.id)}
+                                    className="delete-section"
+                                >
+                                    <Delete style={{ color: "white" }} />
+                                </button>
+                            </div>
+                        </div>
                         <form>
                             <div className='flex gap-5'>
                                 <div className="form-group flex flex-col">
@@ -365,11 +377,11 @@ const AddEditItem = () => {
                                         </div>
                                     </>
                                 )}
-                                <div className="form-group">
+                                <div className="form-group mt-5 flex gap-2 items-center ">
+                                    <input
+                                        style={{ outline: "none" }}
+                                        type="checkbox" name="required" />
                                     <label>
-                                        <input
-                                            style={{ outline: "none" }}
-                                            type="checkbox" name="required" />
                                         Required
                                     </label>
                                 </div>
@@ -404,8 +416,8 @@ const AddEditItem = () => {
                                         <button
                                             type="button"
                                             onClick={() => handleDeleteOption(section.id, index)}
-                                            // className="delete-option"
-                                            // style={{ height: "4rem", width: "4rem",background:"red"}}
+                                        // className="delete-option"
+                                        // style={{ height: "4rem", width: "4rem",background:"red"}}
                                         >
                                             <Delete style={{ color: "red" }} />
                                         </button>
@@ -419,19 +431,11 @@ const AddEditItem = () => {
                                     Add New Option
                                 </button>
                             </div>
-                            <div className="form-actions">
-                                <button
-                                    type="button"
-                                    onClick={() => handleDeleteSection(section.id)}
-                                    className="delete-section"
-                                >
-                                    <Delete style={{ color: "white" }} />
-                                </button>
-                            </div>
+
                         </form>
                     </div>
                 ))}
-                <button type="button" onClick={handleAddNewSection} className="add-section">
+                <button type="button" onClick={handleAddNewSection} className="add-new-variation">
                     Add New Variation
                 </button>
             </div>

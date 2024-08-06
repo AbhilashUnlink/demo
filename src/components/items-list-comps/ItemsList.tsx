@@ -250,7 +250,9 @@ const ItemsList = () => {
     height: "98vh",
     top: "1vh",
     background: "white",
-    color:"black"
+    color: "black",
+    overflow: "hidden",
+    overflowY: "scroll"
   }
   return (
     <>

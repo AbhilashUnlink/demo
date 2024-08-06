@@ -105,11 +105,23 @@
 .add-section {
     cursor: pointer;
     background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.add-new-variation {
+    cursor: pointer;
+    background-color: green;
     color: black;
     border: none;
     padding: 10px;
     border-radius: 5px;
     margin-right: 10px;
+    width: 15rem;
+    color: white;
 }
 
 .delete-option {
